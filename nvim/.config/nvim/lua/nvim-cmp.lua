@@ -1,37 +1,7 @@
-set completeopt=menu,menuone,noselect " noinsert
+vim.api.nvim_command('set completeopt=menu,menuone,noselect')
 
-lua <<EOF
 local lspkind = require('lspkind')
 
-local lsp_symbols = {
-  Text = "  ",
-  Method = "  ",
-  Function = "  ",
-  Constructor = "  ",
-  Field = " ﴲ ",
-  Variable = "[] ",
-  Class = "   ",
-  Interface = " ﰮ  ",
-  Module = "   ",
-  Property = " 襁 ",
-  Unit = "   ",
-  Value = "   ",
-  Enum = " 練 ",
-  Keyword = "   ",
-  Snippet = "   ",
-  Color = "   ",
-  File = "   ",
-  Reference = "   ",
-  Folder = "   ",
-  EnumMember = "   ",
-  Constant = " ﲀ  ",
-  Struct = " ﳤ  ",
-  Event = "   ",
-  Operator = "   ",
-  TypeParameter = "   "
-}
-
---
 -- completion maps (not cmp) --
 -- line completion - use more!
 -- inoremap <C-l> <C-x><C-l>
@@ -41,24 +11,22 @@ vim.api.nvim_set_keymap("i", "<c-l>", "<c-x><c-l>", { noremap = true })
 vim.api.nvim_set_keymap("i", "<c-v>", "<c-x><c-v>", { noremap = true })
 -- end non-cmp completion maps --
 
--- Setup nvim-cmp
-local cmp = require "cmp"
-
+local cmp = require('cmp')
 
 -- @TODOUA: Try cmdline again soon, lots of updates since last tried
 cmp.setup {
-    snippet = {
-      expand = function(args)
-	   vim.fn["vsnip#anonymous"](args.body)
-      end
-  },
+  snippet = {
+    expand = function(args)
+      vim.fn["UltiSnips#Anon"](args.body)
+    end,
+    },
   mapping = {
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
-    ["<CR>"] = cmp.mapping {
-      i = cmp.mapping.confirm { select = true },
-    },
+--    ["<CR>"] = cmp.mapping {
+--      i = cmp.mapping.confirm { select = true },
+--    },
     ["<Right>"] = cmp.mapping {
       i = cmp.mapping.confirm { select = true },
     },
@@ -108,4 +76,3 @@ cmp.setup {
     end,
   },
 }
-EOF

@@ -1,10 +1,8 @@
-
 lua << EOF
--- initialize global object for config used in lsp.lua
-global = {}
 -- lua lsp package loads here
-require("lsp")
+global = {}
 
+require('lua-init')
 -- a function to print stuff
 -- ex- :luado put(vim.loop)
 -- or inside lua good to see the object
@@ -21,7 +19,7 @@ end
 
 EOF
 
-
+" ------------------Theme
 " true color
 if exists("&termguicolors") && exists("&winblend")
   syntax enable
@@ -30,48 +28,41 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
 endif
-
+" theme
 let g:sonokai_style = 'andromeda'
 let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
-" let g:lightline.colorscheme = 'sonokai'
-
-autocmd FocusLost * call ToggleNumbersOn()
-autocmd FocusGained * call ToggleRelativeOn()
-autocmd InsertEnter * call ToggleNumbersOn()
-autocmd InsertLeave * call ToggleRelativeOn()
-
 "---------------------------
-set autoread      " Reload files changed outside vim
-set hidden	"buffer hidden
+"
+"-------------------Genral sets
+set autoread hidden     " Reload files changed outside vim
 " Trigger autoread when changing buffers or coming back to vim in terminal.
 au FocusGained,BufEnter * :silent! !
-set numberwidth=5
+set numberwidth=4
+
 "set list listchars=tab:»·,trail:·,nbsp:·
 set cursorline
 
  "Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
+set splitbelow splitright
+"Start scrolling when we're 8 lines away from margins
+set scrolloff=8 sidescrolloff=15 sidescroll=1
 
 "Toggle relative numbering, and set to absolute on loss of focus or insert mode
-set nu
-set nowrap
-set rnu
+set nu nowrap rnu
 set mouse=a
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set nohlsearch
-set incsearch
+set tabstop=2
+set ts=2 sts=2 sw=2 expandtab
+set smartindent nohlsearch incsearch 
 set colorcolumn=80
+
+" Preventing commenting the next line
+au BufRead,BufNewFile * set formatoptions=""
+
+
+" Add space for sing column
+set signcolumn=yes
 
 " Give more space for displaying messages.
 set cmdheight=1
@@ -82,41 +73,18 @@ set updatetime=50
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-function! ToggleNumbersOn()
-    set nu
-    set rnu!
-endfunction
-function! ToggleRelativeOn()
-    set rnu
-endfunction
-
-"--------------------------------
-"au BufNewFile,BufRead *.py,*.vhdl
-"    \ set textwidth=79 |
-"    \ set expandtab |
-"    \ set autoindent |
-"    \ set fileformat=unix
-au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.tsx,*.ts,*.jsx,*.vim,*.lua
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2 |
-	\ set expandtab
-
-"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 set ignorecase
 set ruler
-"filenams
-au BufRead * normal zR
 
 "Conceal half-width space with space
 call matchadd('Conceal', '\%u200c', 10, -1, {'conceal':' '})
 set conceallevel=2 concealcursor=nv
 set termbidi
-
-" This add Mark after modificatoin or insertion
 "----------------------------------------
+"
+" This add Mark after modificatoin or insertion
 let g:detect_mod_reg_state = -1
+
 function! DetectRegChangeAndUpdateMark()
     let current_small_register = getreg('"-')
     let current_mod_register = getreg('""')
@@ -127,6 +95,11 @@ function! DetectRegChangeAndUpdateMark()
     endif
 endfunction
 
+autocmd FocusLost * call ToggleNumbersOn()
+autocmd FocusGained * call ToggleRelativeOn()
+autocmd InsertEnter * call ToggleNumbersOn()
+autocmd InsertLeave * call ToggleRelativeOn()
+
 " Mark I at the position where the last Insert mode occured across the buffer
 autocmd InsertLeave * execute 'normal! mI'
 
@@ -135,3 +108,18 @@ autocmd InsertLeave * execute 'normal! mI'
 autocmd CursorMoved * call DetectRegChangeAndUpdateMark()
 autocmd InsertLeave * execute 'normal! mM'
 "----------------------------------------
+function! ToggleNumbersOn()
+    set nu
+    set rnu!
+endfunction
+function! ToggleRelativeOn()
+    set rnu
+endfunction
+
+"--------------------------------
+" Add those file extentions you want to have 4 tab
+"au BufNewFile,BufRead *.py,*.vhdl
+"    \ set textwidth=79 |
+"    \ set expandtab |
+"    \ set autoindent |
+"    \ set fileformat=unix

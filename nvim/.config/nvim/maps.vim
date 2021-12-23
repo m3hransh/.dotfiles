@@ -29,7 +29,8 @@ noremap <silent> <C-B>          :bdelete<CR>
 vnoremap <silent> <C-B>         <C-C>:bdelete<CR>
 inoremap <silent> <C-B>         <C-O>:bdelete<CR>
 
-nnoremap <F3> :set hlsearch!<CR>
+" hlsearch is diabled and I use incsearch instead
+" nnoremap <F3> :set hlsearch!<CR>
 
 " Quickly close windows
 nnoremap <leader>x :x<cr>
