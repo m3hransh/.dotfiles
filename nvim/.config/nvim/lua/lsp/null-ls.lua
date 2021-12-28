@@ -1,31 +1,23 @@
 local null_ls = require("null-ls")
 local b = null_ls.builtins
 
+local filetype_t = {"javascript", "javascriptreact",
+        "javascript.jsx", "typescript",
+        "typescriptreact", "typescript.tsx"}
+
 local sources = {
     b.formatting.prettier.with{
-      filetypes = {"javascript", "javascriptreact",
-        "javascript.jsx", "typescript",
-        "typescriptreact", "typescript.tsx"},
+      filetypes = filetype_t,
       preferred_formatting_clients = "node_modules/.bin"
     },
---    b.formatting.stylua.with({
---        condition = function(utils)
---            return utils.root_has_file("stylua.toml")
---        end,
---    }),
---    b.formatting.trim_whitespace.with({
---      filetypes = { "tmux", "teal", "tridactyl" }
---    }),
---    b.formatting.fish_indent,
---    b.formatting.shfmt,
---    b.diagnostics.write_good,
---    b.diagnostics.markdownlint,
---    b.diagnostics.teal,
---    b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
---    b.code_actions.gitsigns,
---    b.code_actions.gitrebase,
---    b.hover.dictionary,
-    b.diagnostics.tsc,
+    b.diagnostics.eslint.with{
+      filetypes = filetype_t,
+      preferred_formatting_clients = "node_modules/.bin"
+    },
+    b.code_actions.eslint_d.with{
+      filetypes = filetype_t,
+      preferred_formatting_clients = "node_modules/.bin"
+    },
 }
 
 local M = {}

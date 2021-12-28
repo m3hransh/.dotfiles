@@ -4,12 +4,10 @@ local lsp = vim.lsp
 
 local BORDER_OPTS = { border = "single", focusable = false, scope = "line" }
 -- config the diagnostic use false to remove altogether
-vim.diagnostic.config({ virtual_text = false, float = BORDER_OPTS })
+vim.diagnostic.config({ virtual_text = true, float = BORDER_OPTS })
 
 lsp.handlers["textDocument/signatureHelp"] = lsp.with(lsp.handlers.signature_help, BORDER_OPTS)
 lsp.handlers["textDocument/hover"] = lsp.with(lsp.handlers.hover, BORDER_OPTS)
-
-
 
 global.lsp = {
     border_opts = BORDER_OPTS,
@@ -47,10 +45,6 @@ local on_attach = function(client, bufnr)
         u.buf_map(bufnr, "n", "<Leader>ff", ":LspFormatting<CR>")
         -- too slow
         -- vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()")
-    end
-
-    if client.resolved_capabilities.signature_help then
-        vim.cmd("autocmd CursorHoldI <buffer> lua vim.lsp.buf.signature_help()")
     end
 
     require("illuminate").on_attach(client)
