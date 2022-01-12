@@ -68,11 +68,11 @@ end
 
 
 -- suppress lspconfig messages
-local notify = vim.notify
-vim.notify = function(msg, ...)
-    if msg:match("%[lspconfig%]") then
-        return
-    end
-
-    notify(msg, ...)
-end
+-- local notify = vim.notify
+-- vim.notify = function(msg, ...)
+--     if msg:match("%[lspconfig%]") then
+--         return
+--     end
+-- 
+--     notify(msg, ...)
+-- end
