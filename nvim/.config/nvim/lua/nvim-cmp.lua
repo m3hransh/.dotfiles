@@ -24,12 +24,8 @@ cmp.setup {
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
---    ["<CR>"] = cmp.mapping {
---      i = cmp.mapping.confirm { select = true },
---    },
-    ["<Right>"] = cmp.mapping {
-      i = cmp.mapping.confirm { select = true },
-    },
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    ['<Right>'] = cmp.mapping.confirm({ select = true }),
     ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
     ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
     ["<C-e>"] = cmp.mapping.abort(),
@@ -46,7 +42,7 @@ cmp.setup {
     -- 'crates' is lazy loaded
     { name = "nvim_lsp" },
     { name = "treesitter" },
-      {name = "ultisnips"},
+    {name = "ultisnips" },
     { name = "path" },
     {
       name = "buffer",
