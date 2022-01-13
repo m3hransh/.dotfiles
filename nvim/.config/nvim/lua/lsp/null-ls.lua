@@ -1,22 +1,22 @@
 local null_ls = require("null-ls")
 local b = null_ls.builtins
 
-local filetype_t = {"javascript", "javascriptreact",
+local filetypeTS = {"javascript", "javascriptreact",
         "javascript.jsx", "typescript",
         "typescriptreact", "typescript.tsx"}
 
 local sources = {
-    b.formatting.prettier.with{
-      filetypes = filetype_t,
-      preferred_formatting_clients = "node_modules/.bin"
+    b.formatting.prettierd.with{
+      filetypes = filetypeTS,
+      prefer_local = "node_modules/.bin"
     },
-    b.diagnostics.eslint.with{
-      filetypes = filetype_t,
-      preferred_formatting_clients = "node_modules/.bin"
+    b.diagnostics.eslint_d.with{
+      filetypes = filetypeTS,
+      prefer_local = "node_modules/.bin"
     },
     b.code_actions.eslint_d.with{
-      filetypes = filetype_t,
-      preferred_formatting_clients = "node_modules/.bin"
+      filetypes = filetypeTS,
+      prefer_local = "node_modules/.bin"
     },
 }
 
