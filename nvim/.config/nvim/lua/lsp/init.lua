@@ -132,6 +132,9 @@ lsp_installer.on_server_ready(function(server)
   if enhance_server_opts[server.name] then
     -- Enhance the default opts with the server-specific ones
     enhance_server_opts[server.name](opts)
+  else
+    -- If there isn't any server-specific opts use the global on_attach
+    opts.on_attach = on_attach
   end
 
   server:setup(opts)

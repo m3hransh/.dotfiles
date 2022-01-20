@@ -19,10 +19,6 @@ local sources = {
     filetypes = filetypeTS,
     prefer_local = 'node_modules/.bin',
   },
-  b.code_actions.eslint_d.with {
-    filetypes = filetypeTS,
-    prefer_local = 'node_modules/.bin',
-  },
   b.formatting.stylua,
 }
 
