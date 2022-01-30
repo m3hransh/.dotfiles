@@ -97,7 +97,7 @@ local mappings = {
 	},
 	["F"] = {
 		"<cmd>lua require('telescope.builtin').live_grep("
-			.. "vim.tbl_deep_extend('force', require('telescope.themes').get_ivy,"
+			.. "vim.tbl_deep_extend('force', require('telescope.themes').get_ivy(),"
 			.. "{find_command = {'rg', '--files', '--hidden', '-g', '!.git' }}))<CR>",
 		"Find Text",
 	},
