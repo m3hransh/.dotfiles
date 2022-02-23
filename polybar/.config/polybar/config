@@ -79,24 +79,6 @@ scroll-down = i3wm-wsprev
 
 tray-position = none
 
-[module/xwindow]
-type = internal/xwindow
-; Available tags:
-;   <label> (default)
-format = <label>
-format-padding = 2
-
-; Available tokens:
-;   %title%
-; Default: %title%
-label = %title%
-label-maxlen = 50
-
-; Used instead of label when there is no window title
-; Available tokens:
-;   None
-label-empty = Desktop
-
 [module/xkeyboard]
 type = internal/xkeyboard
 
@@ -125,11 +107,6 @@ time =   %Y-%m-%d %a %I:%M %p
 ; Available tags:
 ;   <label> (default)
 format = <label>
-
-; Available tokens:
-;   %date%
-;   %time%
-; Default: %date%
 label = %time%
 
 [module/i3]
@@ -176,11 +153,8 @@ label-separator-padding = 1
 label-separator-foreground = #ffb52a
 
 [settings]
-
 pseudo-transparency = false
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini
