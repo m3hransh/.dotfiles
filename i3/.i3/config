@@ -39,6 +39,9 @@ exec_always "setxkbmap -layout us,ir,de -option 'grp:alt_shift_toggle'"
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
 
+# redshift
+exec --no-startup-id redshift-gtk
+
 ##########################################################################
 #####  keybindings
 ##########################################################################
@@ -63,6 +66,9 @@ bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+c exec kitty -e nvim
+bindsym $mod+a exec brave
+bindsym $mod+Ctrl+c workspace $ws1; exec kitty -e nvim
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec kitty -e 'mocp'
@@ -156,7 +162,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -168,6 +174,11 @@ bindsym $mod+minus scratchpad show
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
+
+bindsym $mod+Ctrl+$vi_right workspace next
+bindsym $mod+Ctrl+$vi_up workspace next
+bindsym $mod+Ctrl+$vi_left workspace prev
+bindsym $mod+Ctrl+$vi_down workspace prev
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -255,7 +266,9 @@ bindsym $mod+9 exec --no-startup-id blurlock
 ##########################################################################
 
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:Noto Sans 11
+font pango:Noto Sans 12
+for_window [all] title_window_icon padding 1px
+for_window [class=".*"] title_format "<b>%title</b>"
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 02
@@ -264,18 +277,18 @@ default_floating_border pixel 01
 #Colors
 set $back               #282C34
 set $primary            #ABB2BF
-set $secondary          #0FE0C9
+set $secondary          #07AFBE
 set $black              #282A2E
 set $grey               #3E4452
 set $white              #C5C8C6
 set $pink               #fa4d8d
 
-# class                 border    backgr.   text      indicator   child_border
-client.focused          $grey     $grey     $primary  #2e9ef4     $secondary
-client.focused_inactive $back     $back     $white    #484e50     $back
-client.unfocused        $back     $back     $grey     #292d2e     $back
-client.urgent           $back     #900000   $white    #900000     #900000
-client.placeholder      $back     #0c0c0c   $white    #000000     #0c0c0c
+# class                 border    backgr.     text      indicator   child_border
+client.focused          $grey     $secondary  $black    $secondary  $secondary
+client.focused_inactive $back     $back       $white    #484e50     $back
+client.unfocused        $back     $back       $white     #292d2e     $back
+client.urgent           $back     #900000     $white    #900000     #900000
+client.placeholder      $back     #0c0c0c     $white    #000000     #0c0c0c
 client.background       $back
 
 
