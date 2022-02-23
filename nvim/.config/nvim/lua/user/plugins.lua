@@ -75,6 +75,12 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
+  -- LSP outline
+  use {
+      "simrat39/symbols-outline.nvim",
+      cmd = "SymbolsOutline",
+    }
+
   -- snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
