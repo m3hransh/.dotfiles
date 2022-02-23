@@ -34,10 +34,6 @@ keymap("n", "<C-S>", ":update<CR>", opts)
 keymap("v", "<C-S>", "<C-C>:update<CR>", opts)
 keymap("i", "<C-S>", "<C-O>:update<CR>", opts)
 
--- Close buffer
-keymap("n", "<C-B>", "<C-C>:bdelete<CR>", opts)
-keymap("v", "<C-B>", "<C-C>:bdelete<CR>", opts)
-keymap("i", "<C-B>", "<C-O>:bdelete<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
