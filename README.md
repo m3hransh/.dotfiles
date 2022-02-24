@@ -5,7 +5,8 @@ like i3 might be specific to my OS, while others can be applied to other OSs, as
 
 ![preview](images/preview.png)
 
-**I am using GNU stow to manage my dotfiles. If you don't know about start** [here](https://gruby.medium.com/dotfile-how-to-manage-and-sync-with-git-gnu-stow-6beada1529ea)
+`I am using GNU stow to manage my dotfiles. If you don't know about it, I have a blog post to help you `
+=> [mehranshahidi.ir/blog/why-dotfiles-how-to-manage-them](https://www.mehranshahidi.ir/blog/why-dotfiles-how-to-manage-them)
 ## Tools I am using
 - [Kitty](https://sw.kovidgoyal.net/kitty/): graphics processing unit-accelerated terminal emulator for Linux and macOS
 - [Fish](https://fishshell.com/):Unix shell with a focus on interactivity and usability
