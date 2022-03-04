@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"
   use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
+  use "WhoIsSethDaniel/goldsmith.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -99,6 +100,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "nvim-treesitter/nvim-treesitter-textobjects"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
