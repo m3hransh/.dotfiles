@@ -77,9 +77,9 @@ return packer.startup(function(use)
 
   -- LSP outline
   use {
-      "simrat39/symbols-outline.nvim",
-      cmd = "SymbolsOutline",
-    }
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+  }
 
   -- snippets
   use "L3MON4D3/LuaSnip"
@@ -90,7 +90,13 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"
   use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
-  use "WhoIsSethDaniel/goldsmith.nvim"
+  use "ray-x/go.nvim"
+
+  -- Debug
+  use "mfussenegger/nvim-dap"
+  use "theHamsta/nvim-dap-virtual-text"
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use "nvim-telescope/telescope-dap.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -106,6 +112,7 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Markdonw
   use {
     "iamcco/markdown-preview.nvim",
     ft = "markdown",
