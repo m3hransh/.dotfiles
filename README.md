@@ -1,15 +1,21 @@
 # .dotfiles
 This repo is where I keep my config files and instructions to install them.
-I am using Manjaro-i3 as my operating system. Take note that some of these configs, 
-like i3 might be specific to my OS, while others can be applied to other OSs, as well (I don't count Windows).
+I am using Manjaro-i3 as my operating system. Take note that some of these configs 
+like i3 might be specific to my OS, while others can be applied to other OSs, as well (Windows users should use [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)).
 
 ![preview](images/preview.png)
 
 `I am using GNU stow to manage my dotfiles. If you don't know about it, I have a blog post to help you `
 => [mehranshahidi.ir/blog/why-dotfiles-how-to-manage-them](https://www.mehranshahidi.ir/blog/why-dotfiles-how-to-manage-them)
+## Installation 
+1. Install [fish](fish) 
+2. Add AUR to Manjaro (OS specific)
+3. Install Fira code nerd font (It's inside AUR repo)
+4. Install [nvim](nvim)
+
 ## Tools I am using
-- [Kitty](https://sw.kovidgoyal.net/kitty/): graphics processing unit-accelerated terminal emulator for Linux and macOS
-- [Fish](https://fishshell.com/):Unix shell with a focus on interactivity and usability
+- [Kitty](https://sw.kovidgoyal.net/kitty/): Graphics processing unit-accelerated terminal emulator for Linux and macOS
+- [Fish](https://fishshell.com/): Unix shell with a focus on interactivity and usability
 - [Neovim](https://neovim.io/): Enable new applications without compromising Vim's traditional roles
 - [Picom](https://github.com/yshui/picom): A lightweight compositor for X11
 - [Polybar](https://github.com/polybar/polybar): Customizable status bar
@@ -20,8 +26,3 @@ like i3 might be specific to my OS, while others can be applied to other OSs, as
 - [Lazygit](https://github.com/jesseduffield/lazygit): Simple terminal UI for git commands
 - [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode): Patches developer targeted fonts with a high number of glyphs (icons)
 - [Tokyo Night Theme](https://github.com/folke/tokyonight.nvim): A dark and light Neovim theme
-<!-- ## Steps for installation -->
-<!-- 1. Install [fish](fish) -->
-<!-- 2. Add AUR to Manjaro (OS specific) -->
-<!-- 3. Install Fira code nerd font (It's inside AUR repo) -->
-<!-- 4. Install [nvim](nvim) -->
