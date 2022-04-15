@@ -8,10 +8,13 @@ like i3 might be specific to my OS, while others can be applied to other OSs, as
 `I am using GNU stow to manage my dotfiles. If you don't know about it, I have a blog post to help you `
 => [mehranshahidi.ir/blog/why-dotfiles-how-to-manage-them](https://www.mehranshahidi.ir/blog/why-dotfiles-how-to-manage-them)
 ## Installation 
-1. Install [fish](fish) 
-2. Add AUR to Manjaro (OS specific)
-3. Install Fira code nerd font (It's inside AUR repo)
-4. Install [nvim](nvim)
+1. Install [gh](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+2. Signup using `gh auth login` ( not necessary for the server)
+3. Clone the repo in the home directory
+5. Install [fish](fish) 
+6. Add AUR to Manjaro (OS specific)
+7. Install Fira code nerd font (It's inside AUR repo)
+8. Install [nvim](nvim)
 
 ## Tools I am using
 - [Kitty](https://sw.kovidgoyal.net/kitty/): Graphics processing unit-accelerated terminal emulator for Linux and macOS
