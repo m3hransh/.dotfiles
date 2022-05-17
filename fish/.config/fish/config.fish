@@ -16,6 +16,11 @@ alias color "colorscript random"
 alias ll "exa --icons -l -g"
 alias tlmgr "/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
 
+# PATH
+set -U fish_user_paths $HOME/.local/share/gem/ruby/3.0.0/bin
+
+
+
 starship init fish | source
 
 # TokyoNight Color Palette

@@ -386,7 +386,7 @@ fixed-values = true
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted =  %used%%/%total%
+label-mounted =  %used%/%total%
 label-mounted-background = ${colors.red-alt}
 label-mounted-foreground = ${colors.background}
 ; Spacing (number of spaces, pixels, points) between entries
