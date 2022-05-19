@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_wind:windscribe\x20connect
 SETUVAR _fish_abbr_ws:sudo\x20systemctl\x20start\x20windscribe
 SETUVAR _fisher_edc_2F_bass_files:/home/mehran/\x2econfig/fish/functions/__bass\x2epy\x1e/home/mehran/\x2econfig/fish/functions/bass\x2efish
