@@ -115,7 +115,8 @@ return packer.startup(function(use)
   -- Markdonw
   use {
     "iamcco/markdown-preview.nvim",
-    ft = "markdown",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" }, 
     run = "cd app && yarn install",
   }
   -- Automatically set up your configuration after cloning packer.nvim

@@ -45,7 +45,7 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-  if client.resolved_capabilities.document_highlight then
+  if client.server_capabilities.document_highlight then
     vim.api.nvim_exec(
       [[
       augroup lsp_document_highlight
@@ -68,7 +68,7 @@ end
 
 local function lsp_keymaps(client, bufnr)
   local opts = { noremap = true, silent = true }
-  local rc = client.resolved_capabilities
+  local rc = client.server_capabilities
 
   map_cond(rc.declaration, bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   map_cond(rc.goto_definition, bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
@@ -94,7 +94,7 @@ end
 M.on_attach = function(client, bufnr)
   if client.name == "tsserver" then
     -- Disable the tsserver formating for null-ls
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
   lsp_keymaps(client, bufnr)
   lsp_highlight_document(client)
