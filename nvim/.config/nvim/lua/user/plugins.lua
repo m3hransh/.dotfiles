@@ -91,6 +91,7 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use "ray-x/go.nvim"
+  use "ray-x/guihua.lua" -- floating window support
 
   -- Debug
   use "mfussenegger/nvim-dap"
