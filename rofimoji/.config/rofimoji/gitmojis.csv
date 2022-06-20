@@ -1,0 +1,69 @@
+🎨 <small>:art:</small>  Improve structure / format of the code.
+⚡️ <small>:zap:</small>  Improve performance.
+🔥 <small>:fire:</small>  Remove code or files.
+🐛 <small>:bug:</small>  Fix a bug.
+🚑️ <small>:ambulance:</small>  Critical hotfix.
+✨ <small>:sparkles:</small>  Introduce new features.
+📝 <small>:memo:</small>  Add or update documentation.
+🚀 <small>:rocket:</small>  Deploy stuff.
+💄 <small>:lipstick:</small>  Add or update the UI and style files.
+🎉 <small>:tada:</small>  Begin a project.
+✅ <small>:white_check_mark:</small>  Add, update, or pass tests.
+🔒️ <small>:lock:</small>  Fix security issues.
+🔖 <small>:bookmark:</small>  Release / Version tags.
+🚨 <small>:rotating_light:</small>  Fix compiler / linter warnings.
+🚧 <small>:construction:</small>  Work in progress.
+💚 <small>:green_heart:</small>  Fix CI Build.
+⬇️ <small>:arrow_down:</small>  Downgrade dependencies.
+⬆️ <small>:arrow_up:</small>  Upgrade dependencies.
+📌 <small>:pushpin:</small>  Pin dependencies to specific versions.
+👷 <small>:construction_worker:</small>  Add or update CI build system.
+📈 <small>:chart_with_upwards_trend:</small>  Add or update analytics or track code.
+♻️ <small>:recycle:</small>  Refactor code.
+➕ <small>:heavy_plus_sign:</small>  Add a dependency.
+➖ <small>:heavy_minus_sign:</small>  Remove a dependency.
+🔧 <small>:wrench:</small>  Add or update configuration files.
+🔨 <small>:hammer:</small>  Add or update development scripts.
+🌐 <small>:globe_with_meridians:</small>  Internationalization and localization.
+✏️ <small>:pencil2:</small>  Fix typos.
+💩 <small>:poop:</small>  Write bad code that needs to be improved.
+⏪️ <small>:rewind:</small>  Revert changes.
+🔀 <small>:twisted_rightwards_arrows:</small>  Merge branches.
+📦️ <small>:package:</small>  Add or update compiled files or packages.
+👽️ <small>:alien:</small>  Update code due to external API changes.
+🚚 <small>:truck:</small>  Move or rename resources (e.g.: files, paths, routes).
+📄 <small>:page_facing_up:</small>  Add or update license.
+💥 <small>:boom:</small>  Introduce breaking changes.
+🍱 <small>:bento:</small>  Add or update assets.
+♿️ <small>:wheelchair:</small>  Improve accessibility.
+💡 <small>:bulb:</small>  Add or update comments in source code.
+🍻 <small>:beers:</small>  Write code drunkenly.
+💬 <small>:speech_balloon:</small>  Add or update text and literals.
+🗃️ <small>:card_file_box:</small>  Perform database related changes.
+🔊 <small>:loud_sound:</small>  Add or update logs.
+🔇 <small>:mute:</small>  Remove logs.
+👥 <small>:busts_in_silhouette:</small>  Add or update contributor(s).
+🚸 <small>:children_crossing:</small>  Improve user experience / usability.
+🏗️ <small>:building_construction:</small>  Make architectural changes.
+📱 <small>:iphone:</small>  Work on responsive design.
+🤡 <small>:clown_face:</small>  Mock things.
+🥚 <small>:egg:</small>  Add or update an easter egg.
+🙈 <small>:see_no_evil:</small>  Add or update a .gitignore file.
+📸 <small>:camera_flash:</small>  Add or update snapshots.
+⚗️ <small>:alembic:</small>  Perform experiments.
+🔍️ <small>:mag:</small>  Improve SEO.
+🏷️ <small>:label:</small>  Add or update types.
+🌱 <small>:seedling:</small>  Add or update seed files.
+🚩 <small>:triangular_flag_on_post:</small>  Add, update, or remove feature flags.
+🥅 <small>:goal_net:</small>  Catch errors.
+💫 <small>:dizzy:</small>  Add or update animations and transitions.
+🗑️ <small>:wastebasket:</small>  Deprecate code that needs to be cleaned up.
+🛂 <small>:passport_control:</small>  Work on code related to authorization, roles and permissions.
+🩹 <small>:adhesive_bandage:</small>  Simple fix for a non-critical issue.
+🧐 <small>:monocle_face:</small>  Data exploration/inspection.
+⚰️ <small>:coffin:</small>  Remove dead code.
+🧪 <small>:test_tube:</small>  Add a failing test.
+👔 <small>:necktie:</small>  Add or update business logic
+🩺 <small>:stethoscope:</small>  Add or update healthcheck.
+🧱 <small>:bricks:</small>  Infrastructure related changes.
+🧑‍💻 <small>:technologist:</small>  Improve developer experience
