@@ -238,6 +238,29 @@ bindsym $mod+Shift+e exec $HOME/.config/rofi/scripts/powermenu.sh
 bindsym $mod+p exec rofimoji
 bindsym $mod+g exec rofimoji -f gitmojis
 
+# vi keybindings
+set $vi_left h
+set $vi_down j
+set $vi_up k
+set $vi_right l
+
+# change focus
+bindsym $mod+$vi_left focus left
+bindsym $mod+$vi_down focus down
+bindsym $mod+$vi_up focus up
+bindsym $mod+$vi_right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+$vi_left move left
+bindsym $mod+Shift+$vi_down move down
+bindsym $mod+Shift+$vi_up move up
+bindsym $mod+Shift+$vi_right move right
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
